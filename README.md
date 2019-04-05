@@ -29,9 +29,19 @@ In this challenge, you will create a Single Page Application complete with Clien
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Explain the differences between `client-side routing` and `server-side routing`.
+
+Client-side routing gives the impression to the users that the application has multiple pages but which help the user navigate to those different pages (views). It is faster that server-side routing because it eliminates the need to send a request to the server each time we want to navigate to a page. The down side is that the app will load slower on the initial load of the application since all the views would need to be loaded in order to allow navigation.
+
 - [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+Create: Post request HTTP method.
+Read: Get request HTTP method.
+Update: Put request HTTP method.
+Destroy: Delete request HTTP method.
+
 - [ ] Mention three tools we can use to make AJAX requests.
 
+We can use the browser native fetch() method or the Axios libray and we can also use jQuery for AJAX requests.
 
 ## Project Set Up
 
@@ -53,9 +63,10 @@ Follow these steps to set up and work on your project:
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo).
 - [ ] Add your Project Manager as a Reviewer on the Pull-request
-- [ ] PM then will count the HW as done by  merging the branch back into master.
+- [ ] PM then will count the HW as done by merging the branch back into master.
+
 ## Minimum Viable Product
 
 The MVP of this project will be broken up between 2 stages. Follow each step and be sure to use your design/style skills to make this application look professional.
