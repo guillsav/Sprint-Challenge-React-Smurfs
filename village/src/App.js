@@ -33,6 +33,13 @@ class App extends Component {
     this.props.history.push('/');
   };
 
+  deleteSmurf = id => {
+    axios
+      .delete(`http://localhost:3333/smurfs/${id}`)
+      .then(res => this.setState({smurfs: res.data}))
+      .catch(err => console.log(err));
+  };
+
   render() {
     return (
       <div className="App">
@@ -46,7 +53,13 @@ class App extends Component {
         <Route
           exact
           path="/"
-          render={props => <Smurfs {...props} smurfs={this.state.smurfs} />}
+          render={props => (
+            <Smurfs
+              {...props}
+              smurfs={this.state.smurfs}
+              deleteSmurf={this.deleteSmurf}
+            />
+          )}
         />
         <Route
           path="/smurf-form"
