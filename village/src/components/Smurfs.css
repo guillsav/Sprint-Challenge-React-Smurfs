@@ -1,0 +1,21 @@
+.Smurfs {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.Smurfs h2 {
+  font-size: 3rem;
+  margin: 50px 0;
+  color: #515151;
+  text-align: left;
+}
+
+.Smurfs h2 span {
+  color: dodgerblue;
+}
+
+.Smurfs .smurf-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
