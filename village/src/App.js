@@ -29,13 +29,29 @@ class App extends Component {
       .post('http://localhost:3333/smurfs', newSmurf)
       .then(res => this.setState({smurfs: res.data}))
       .catch(err => console.log(err));
+
+    this.props.history.push('/');
   };
 
   render() {
     return (
       <div className="App">
-        <SmurfForm addSmurf={this.addSmurf} />
-        <Smurfs smurfs={this.state.smurfs} />
+        <nav>
+          <h2>Smurf Village</h2>
+          <NavLink exact to="/">
+            Home
+          </NavLink>
+          <NavLink to="/smurf-form">Add Smurf</NavLink>
+        </nav>
+        <Route
+          exact
+          path="/"
+          render={props => <Smurfs {...props} smurfs={this.state.smurfs} />}
+        />
+        <Route
+          path="/smurf-form"
+          render={props => <SmurfForm {...props} addSmurf={this.addSmurf} />}
+        />
       </div>
     );
   }
