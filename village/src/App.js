@@ -43,13 +43,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <nav>
-          <h2>Smurf Village</h2>
-          <NavLink exact to="/">
-            Home
-          </NavLink>
-          <NavLink to="/smurf-form">Add Smurf</NavLink>
-        </nav>
+        <div className="header">
+          <div className="header-content">
+            <h2>Smurf Village</h2>
+            <nav>
+              <NavLink exact to="/">
+                Home
+              </NavLink>
+              <NavLink to="/smurf-form">Add Smurf</NavLink>
+            </nav>
+          </div>
+        </div>
         <Route
           exact
           path="/"
